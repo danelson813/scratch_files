@@ -1,0 +1,13 @@
+[MASTER]
+output-format = colorized
+ignore = .tox,.git,__pycache__,docs
+disable = C0103,C0114,C0115,C0116,R0903,R0914
+# C0103: invalid-name
+# C0114: missing-module-docstring
+# C0115: missing-class-docstring
+# C0116: missing-function-docstring
+# R0903: too-few-public-methods
+# R0914: too-many-locals
+# load-plugins = pylint_django,pylint_flask
+# pylint-django
+# pylint-flask
