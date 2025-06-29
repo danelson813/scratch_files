@@ -4,6 +4,7 @@ logger.add(
     'info.log',
     format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {module}:{function}:{line} - {message}",
     level="INFO",
+    colorize=True
 )
 
 
