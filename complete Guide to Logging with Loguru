@@ -1,0 +1,60 @@
+'''
+python3 -m venv loguru-demo
+cd loguru-demo
+pip install loguru
+
+create app.py
+
+the code for app.py:
+from loguru import logger
+
+logger.info("Happy logging with Loguru!")
+That is all that is needed
+run it:  python app.py
+possible levels:
+    TRACE  5
+    DEBUG  10
+    INFO  20
+    SUCCESS  25
+    WARNING  30
+    ERROR  40
+    CRITICAL  50
+
+To change level:
+    logger.remove(0)
+    logger.add(sys.stderr, level="INFO")
+
+add() takes the following parameters:
+    sink: specifies a destination for each record produced bu the logger. By default, it is set to sys.stderr.
+    level: specifies the minimum log level for the logger.
+    format: useful for defining a custom format for your logs.
+    filter: used to determine whether a record should be logged or not.
+    colorize: takes a boolean value and determines whether or not terminal colorization should be enabled.
+    serialize: causes the log record to be presented in JSON format if set to True.
+    backtrace: determines whether the exception trace should extend beyond the point where the error is captured, making it easier to debug.
+    diagnose: determines whether the variable values should be displayed in the exception trace. You should set it to False in the production environment to avoid leaking sensitive information.
+    enqueue: enabling this option places the log records in a queue to avoid conflicts when multiple processes are logging to the same destination.
+    catch: if an unexpected error happens when logging to the specified sink, you can catch that error by setting this option to True. The error will be printed to the standard error.
+
+    
+Formatting log records:
+    import sys
+    from loguru import logger
+
+    logger.remove(0)
+    logger.add(sys.stderr, format="{time} | {level} | {message}")
+    logger.add(sys.stderr, format="{time:MMMM D, YYYY > HH:mm:ss} | {level} | {message}")
+
+    
+Can log to a file:
+    logger.remove(0)
+    logger.add('loguru.log')
+    possible attributes:
+        rotation: specifies a condition in which the current log file will be closed and a new file will be created. This condition can be an int, datetime or str, and str is recommended since it is more human-readable.
+        retention: specifies how log each log file will be retained before it is deleted from the filesystem.
+        compression: the log file will be converted to the specified compression format if this option is set.
+        delay: if set to True, the creation of a new log file will be delayed until the first log message is pushed.
+        mode, buffering, encoding: These parameters will be passed to Python's open() function which determines how Python will open the log files.
+
+
+'''
