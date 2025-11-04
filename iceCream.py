@@ -1,4 +1,4 @@
-'''
+"""
 Installing icecream
 To use ic(), first install the icecream library:
 
@@ -29,4 +29,4 @@ No need to manually type "y:"—ic() does it for you!
 
 
 
-'''
+"""

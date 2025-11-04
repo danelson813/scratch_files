@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup as bs
 from selenium import webdriver
 import pandas as pd
@@ -13,11 +12,10 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import ElementNotInteractableException
 
 
-service = Service('path to Chromedriver download')
+service = Service("path to Chromedriver download")
 options = Options()
-options.add_argument('--incognito')
-options.add_argument('start_maximized')
-options.add_argument('--headless')
+options.add_argument("--incognito")
+options.add_argument("start_maximized")
+options.add_argument("--headless")
 
 driver = webdriver.Chrome(service=service, options=options)
-

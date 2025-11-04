@@ -1,4 +1,4 @@
-'''
+"""
 .
 
 📌 Working with remote repositories
@@ -31,7 +31,7 @@ Create a new local branch, often called a feature branch, from the base branch (
 Make code changes in the feature branch locally.
 Push the feature branch to a remote repository.
 # Assuming you have local clone of remote repository
-# Step 1: Create new local branch based of base branch and switch to it 
+# Step 1: Create new local branch based of base branch and switch to it
 git switch <base-branch>
 git pull # Ensure base branch is at the latest version
 git switch -c <feature-branch>
@@ -51,7 +51,7 @@ git show HEAD
 git add <file-path(s)>
 git commit --amend -m "<New-commit-message>"
 # Step 3: Check recent commit history to verify the correct edit
-git show HEAD 
+git show HEAD
 # Step 4: Push the edit upstream
 git push -f # Then, verify it in the web interface of the hosting service
 If you don’t need to change your commit message, then simply use this git commit --amend --no-edit when committing. In the last line, -f is short for --force, we need this to update upstream branch to align with the new changes so that our local branch and remote branch won’t diverge and create conflicts later on.
@@ -80,4 +80,4 @@ git push origin -d <branch-name>
 git branch -a
 
 
-'''
+"""

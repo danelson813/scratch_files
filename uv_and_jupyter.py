@@ -1,4 +1,4 @@
-'''
+"""
 
 start with:
 pip install jupyterlab
@@ -30,4 +30,4 @@ for instance:    ./jub.bat mynewproject
 
 In your new directory, you can uv add the packages that you need, and when you run Jupyter, the new kernel, with the same name as your project, will be waiting there for you.
 
-'''
+"""

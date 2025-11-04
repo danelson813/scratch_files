@@ -1,4 +1,4 @@
-'''
+"""
 What You’ll Need
 Before we get started, make sure you have:
 
@@ -28,7 +28,7 @@ conda install anaconda::ipykernel # For Conda
 
 # Link your environment to the ipykernel (Replace .venv with your virtual env name)
 # You can choose your display name as something which helps you quickly identify
-# Prefered name - "Python<version-number> (<your-project-name>)
+# Preferred name - "Python<version-number> (<your-project-name>)
 python -m ipykernel install --user --name=.venv --display-name "Python (myproject)"
 
 # Run Jupyter-lab
@@ -37,4 +37,4 @@ jupyter lab
 jupyter notebook
 
 
-'''
+"""

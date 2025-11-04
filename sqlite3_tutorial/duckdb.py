@@ -2,7 +2,7 @@
 
 
 # Creating tables
-'''
+"""
 import duckdb
 
 duckdb.sql("CREATE TABLE t1(id INTEGER PRIMARY KEY, j VARCHAR)")
@@ -17,9 +17,9 @@ results
 ├─────────────────┤
 │     0 rows      │
 └─────────────────┘
-'''
+"""
 
-'''
+"""
 Populating tables
 
 duckdb.sql("insert into t1(id,j) values(1,2)")
@@ -32,10 +32,10 @@ results
 │ int32 │ varchar │
 ├───────┼─────────┤
 │     1 │ 2       │
-└───────┴─────────┘'''
+└───────┴─────────┘"""
 
 
-'''
+"""
 One huge advantage DuckDB has is that you can also populate tables with data from Pandas, Polars and Vaex dataframes. Here’s a Pandas example.
 
 import duckdb
@@ -94,10 +94,10 @@ results
 │   102 │
 │   103 │
 └───────┘
-'''
+"""
 
 
-'''
+"""
 Deleting data
 
 duckdb.sql("delete from my_table where a in (1,2,3,4,5)")
@@ -118,10 +118,10 @@ results
 │   102 │
 │   103 │
 └───────┘
-'''
+"""
 
 
-'''
+"""
 Upserting table data
 
 As well as a regular SQL update command (which I won’t show), DuckDB also provides an upsert mechanism. To do this there is an unusual INSERT OR REPLACE SQL command. Here’s how it works.
@@ -160,10 +160,10 @@ results
 │     1 │ 99      │
 │     3 │ 42      │
 └───────┴─────────┘
-'''
+"""
 
 
-'''
+"""
 Using persistent storage
 By default, DuckDB operates on an in-memory database. That means that any tables created are not persisted to disk, and when you end your Python or Jupyter Notebook session, that data is gone. If you don’t want that to happen, you can persist your data to disk using the connect method. Any data written using that connection will be saved and can be reloaded by re-connecting to the same file. For example,
 
@@ -191,4 +191,4 @@ con.sql("show all tables")
 │ file     │ main    │ test    │ [i]          │ [INTEGER]    │ false     │
 └──────────┴─────────┴─────────┴──────────────┴──────────────┴───────────┘
 
-'''
+"""

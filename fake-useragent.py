@@ -1,4 +1,4 @@
-'''
+"""
 # store the IP as a string in a variable
 proxy = '00.00.000.000:0000'
 response = requests.get('https://books.toscrape.com/',
@@ -26,10 +26,10 @@ To implement the user-agent into our get-request, simply pass it as a parameter 
 useragent_header = {'User-Agent': fake_chrome_browser}
 url_base = 'https://books.toscrape.com/'
 response = requests.get('url_base,
-                         headers = useragent_header, 
+                         headers = useragent_header,
                          proxies={"http": proxy, "https": proxy})
 
-                         
+
 Now it is possible to bypass that pesky IP timeout by using a proxy, and further convolution is possible by randomizing the user-agent each request by with UserAgent().random . Putting everything together:
 
 # import libraries
@@ -42,10 +42,10 @@ ua = UserAgent()
 fake_browser = ua.random
 useragent_header = {'User-Agent': fake_browser}
 response = requests.get('url_base,
-                         headers = useragent_header, 
+                         headers = useragent_header,
                          proxies={"http": proxy, "https": proxy})
 print(response.content)
 
 
 
-'''
+"""

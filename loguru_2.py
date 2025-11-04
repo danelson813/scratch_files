@@ -1,4 +1,4 @@
-'''
+"""
 Customizing Loguru
 When using Python's logging module, you'll need to create custom handlers, formatters, and filters to customize a logger's formatting and output. Loguru simplifies this process by only using its add() method, which takes the following parameters:
 
@@ -37,4 +37,4 @@ mode, buffering, encoding: These parameters will be passed to Python's open() fu
 When rotation has an int value, it corresponds to the maximum number of bytes the current file is allowed to hold before a new one is created. When it has a datetime.timedelta value, it indicates the frequency of each rotation, while datetime.time specifies the time of the day each rotation should occur. And finally, rotation can also take a str value, which is the human-friendly variant of the aforementioned types.
 
 
-'''
+"""

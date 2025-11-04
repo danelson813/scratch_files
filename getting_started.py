@@ -2,14 +2,15 @@
 # This is based on a Medium article
 # Fully Explained Git + Python Workflow with uv, ruff, and ty
 # by Gwang-Jin
-'''
-    start with smart defaults
-    git config --global color.ui auto
-    git config --global fetch.prune true
-    and a couple of alias'
-    git config --global alias.st status
-    git config --global alias.co checkout
-'''
+"""
+start with smart defaults
+git config --global color.ui auto
+git config --global fetch.prune true
+and a couple of alias'
+git config --global alias.st status
+git config --global alias.co checkout
+"""
+
 """
 setup:  uv venv
         uv pip install ruff ty
@@ -29,7 +30,7 @@ add this to your project's .gitignore:
     .env
     .cache/    
 """
-'''
+"""
 nano .precommit-config.yaml
 repos:
   -repo: local
@@ -53,7 +54,7 @@ repos:
        types: [python]   
 then run:
     uv run pre-commit install   
-'''
+"""
 
 """
 to set up the project structure:
@@ -65,7 +66,7 @@ to set up the project structure:
     # install ruff , ty, and pre-commit
     uv pip install ruff, ty, and pre-commit
 """
-'''
+"""
 # create .gitignore
 add:
     echo "__pycache__/
@@ -73,7 +74,7 @@ add:
     *.pyc
     .env
     " > .gitignore
-'''
+"""
 
 """
 # add .pre-commit-config.yaml
